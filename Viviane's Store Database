@@ -1,4 +1,4 @@
--- In this SQL, I've created a databsde for a store that sells all my favorite things.
+-- In this SQL, I've created a database for a store that sells all my favorite things.
 
 CREATE TABLE store (id INTEGER PRIMARY KEY, item TEXT, section TEXT, price INTEGER, quantity INTEGER);
 
