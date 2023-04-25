@@ -1,0 +1,41 @@
+Database courtsey of Pamela Fox https://gist.github.com/pamelafox/26b9357c6120d3d0d27c2b90c950e8c6
+
+This database contains Pokemon statistics providing their name, type, total, HP, attack, defense, special attack, special defense, 
+speed, generation and if they are a legendary pokemon or not.
+
+With this data, I want to answer a few of the following questions:
+
+-- Who are the top 3 fastest grass pokemon?
+SELECT name FROM pokemon 
+WHERE Type_1 = "Grass"
+ORDER BY speed desc
+LIMIT 3;
+
+-- What is the average HP of all pokemon based on generation?
+SELECT generation, AVG(HP) AS Total_HP 
+FROM pokemon
+GROUP BY generation;
+
+-- What pokemon are legendary?
+SELECT name FROM pokemon 
+WHERE legendary = "True";
+
+-- What is the average attack level of dragon types?
+SELECT Type_1, AVG(attack) AS Average_attack 
+FROM pokemon
+WHERE Type_1 = "Dragon";
+
+-- What dark pokemon do you want to capture based on their special attack skills?
+SELECT name, sp_atk, type_1
+FROM pokemon
+WHERE sp_atk > 100 AND type_1 = "Dark"
+ORDER BY sp_atk;
+
+-- What pokemon are considered fast or slow based on their speed status?
+SELECT name, speed,
+CASE
+WHEN speed > 80 THEN "fast"
+ELSE "slow"
+END AS fast_slow
+FROM pokemon
+ORDER BY speed;
