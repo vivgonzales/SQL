@@ -43,4 +43,4 @@ ORDER BY speed;
 -- What is the sum total of pokemon based on generation?
 SELECT generation, SUM(total) AS total_total
 FROM pokemon
-GROUP BY generation
+GROUP BY generation;
