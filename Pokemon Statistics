@@ -32,7 +32,7 @@ WHERE sp_atk > 100 AND type_1 = "Dark"
 ORDER BY sp_atk;
 
 -- What pokemon are considered fast or slow based on their speed status?
-SELECT name, speed,
+SELECT name, speed, 
 CASE
 WHEN speed > 80 THEN "fast"
 ELSE "slow"
