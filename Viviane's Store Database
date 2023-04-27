@@ -31,4 +31,4 @@ where section='stationery';
 SELECT item, price, quantity
 FROM store
 order by quantity desc
-limit 5;
+limit 5; 
