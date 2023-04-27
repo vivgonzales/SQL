@@ -10,7 +10,7 @@ AND orderid <> 'Order ID';
 SELECT COUNT(orderid)
 FROM BIT_DB.JanSales
 WHERE Product='iPhone'
-AND length(orderid) = 6 
+AND length(orderid) = 6  
 AND orderid <> 'Order ID';
 
 -- Select the customer account numbers for all the orders that were placed in February. 
